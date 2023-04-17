@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.onpe.Model.GrupoCaso;
+import com.onpe.model.GrupoCaso;
 
 @Repository
 public interface IGrupoCaso extends JpaRepository <GrupoCaso,String> {
