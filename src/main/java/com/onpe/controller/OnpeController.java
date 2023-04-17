@@ -52,11 +52,11 @@ public class OnpeController  extends WebMvcAutoConfiguration{
 	@Autowired 
 	private IGrupoCasoService iGrupoCasoService; 
 
-	@GetMapping ("/actas_info/{id}")
+	@GetMapping ("/actas_informe/{id}")
 	public String listar (Model modelo, @PathVariable ("id")String id) {
 		
 	modelo.addAttribute("actas", iGrupoCasoService.getGrupoVotacion(id));
-	return "actas_info";
+	return "actas_informe";
 	}
 
 	}
