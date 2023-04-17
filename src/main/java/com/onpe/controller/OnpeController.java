@@ -38,7 +38,7 @@ public class OnpeController  extends WebMvcAutoConfiguration{
 
 	public String actas_info() {
 		
-		return "actas_info";
+		return "actas_informe";
 	}
 
 
@@ -46,7 +46,7 @@ public class OnpeController  extends WebMvcAutoConfiguration{
 
 	public String GeneralPresi() {
 		
-		return "GeneralPrecidencial";
+		return "actas_precidencial";
 	}
 
 	@Autowired 
