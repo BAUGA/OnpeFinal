@@ -1,5 +1,7 @@
 package com.onpe.service;
 
-public interface IFinalServiceImp {
+import com.onpe.model.Final;
 
+public interface IFinalServiceImp {
+	public Final getFinal();
 }

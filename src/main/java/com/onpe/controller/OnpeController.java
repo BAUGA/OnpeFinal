@@ -8,8 +8,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
+import com.onpe.service.IFinalServiceImp;
 import com.onpe.service.IGrupoCasoService;
 
 
@@ -58,5 +60,17 @@ public class OnpeController  extends WebMvcAutoConfiguration{
 	modelo.addAttribute("actas", iGrupoCasoService.getGrupoVotacion(id));
 	return "actas_informe";
 	}
-
+	
+	@Autowired
+	private IFinalServiceImp iFinal;
+	
+	@RequestMapping("/Final")
+	public String Final(Model modelo) {
+		modelo.addAttribute("Final", iFinal.getFinal());
+		return "Final";
+		
 	}
+	
+}
+	
+	
